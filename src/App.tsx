@@ -3,14 +3,14 @@ import { useState } from "react";
 function App() {
   const [time, setTime] = useState<number>(0);
   const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
-  const [buttonText, setButtonText] = useState<string>("Start");
+  const [isRunning, setIsRunning] = useState<boolean>(false);
 
   // When the Start/Stop button is pressed.
   const handleStartStop = () => {
     if (timerId) {
       clearInterval(timerId);
       setTimerId(null);
-      setButtonText("Start");
+      setIsRunning(false);
     } else {
       // Overwrite the time variable every 10 milliseconds
       const id: NodeJS.Timeout = setInterval(
@@ -18,7 +18,7 @@ function App() {
         10
       );
       setTimerId(id);
-      setButtonText("Stop");
+      setIsRunning(true);
     }
   };
 
@@ -41,7 +41,7 @@ function App() {
               onClick={handleStartStop}
               className="w-5/6 rounded bg-gray-900 py-2 text-white hover:bg-gray-800"
             >
-              {buttonText}
+              {isRunning ? "Stop" : "Start"}
             </button>
           </div>
           <div className="flex-1">
