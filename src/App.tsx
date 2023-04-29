@@ -32,21 +32,26 @@ function App() {
   return (
     <>
       <div className="md:container md:mx-auto">
-        <div className="text-center text-4xl">{(time / 1000).toFixed(2)} s</div>
-        <div className="flex flex-row">
-          <button
-            onClick={handleStartStop}
-            className="flex-1 rounded bg-gray-900 py-2 text-white hover:bg-gray-800"
-          >
-            {buttonText}
-          </button>
-
-          <button
-            onClick={handleReset}
-            className="flex-1 rounded bg-gray-100 py-2 text-black hover:bg-gray-50"
-          >
-            Reset
-          </button>
+        <div className="py-8 text-center text-4xl">
+          {(time / 1000).toFixed(2)} s
+        </div>
+        <div className="flex flex-row text-center">
+          <div className="flex-1">
+            <button
+              onClick={handleStartStop}
+              className="w-5/6 rounded bg-gray-900 py-2 text-white hover:bg-gray-800"
+            >
+              {buttonText}
+            </button>
+          </div>
+          <div className="flex-1">
+            <button
+              onClick={handleReset}
+              className="w-5/6 rounded bg-gray-100 py-2 text-black hover:bg-gray-50"
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </>
