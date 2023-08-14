@@ -16,7 +16,7 @@ function App() {
       // Overwrite the time variable every 10 milliseconds
       const id: NodeJS.Timeout = setInterval(
         () => setTime((prevTime) => prevTime + 10),
-        10
+        10,
       );
       setTimerId(id);
       setIsRunning(true);
