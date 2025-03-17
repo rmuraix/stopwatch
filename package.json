@@ -22,7 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
     "@vitejs/plugin-react-swc": "^3.8.0",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.3",
     "eslint-plugin-react-hooks": "^5.1.0",
